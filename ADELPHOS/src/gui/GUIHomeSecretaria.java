@@ -194,6 +194,7 @@ public class GUIHomeSecretaria extends javax.swing.JFrame {
 
         jMenuBar1.add(menuEditar);
 
+        menuMembros2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/research.png"))); // NOI18N
         menuMembros2.setText("Vizualizar");
         menuMembros2.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
 
@@ -227,6 +228,7 @@ public class GUIHomeSecretaria extends javax.swing.JFrame {
 
         jMenuBar1.add(menuMembros2);
 
+        menuSobre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/sobre.png"))); // NOI18N
         menuSobre.setText("Sobre");
         menuSobre.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
         jMenuBar1.add(menuSobre);
