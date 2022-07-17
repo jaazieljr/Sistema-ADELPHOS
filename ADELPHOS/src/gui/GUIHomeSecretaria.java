@@ -4,7 +4,7 @@
  */
 package gui;
 
-import gui.GUICadastrar;
+
 public class GUIHomeSecretaria extends javax.swing.JFrame {
 
     /**
@@ -30,10 +30,10 @@ public class GUIHomeSecretaria extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         painelPrinciapal = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        menuCadastrarMembros = new javax.swing.JMenu();
+        menuCadastrarCongreg = new javax.swing.JMenu();
         menuCadastrarMembro = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem8 = new javax.swing.JMenuItem();
+        cadastrarCong = new javax.swing.JMenuItem();
         jSeparator5 = new javax.swing.JPopupMenu.Separator();
         menuCarta = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -148,9 +148,9 @@ public class GUIHomeSecretaria extends javax.swing.JFrame {
             .addGap(0, 350, Short.MAX_VALUE)
         );
 
-        menuCadastrarMembros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/registro.png"))); // NOI18N
-        menuCadastrarMembros.setText("Cadastrar");
-        menuCadastrarMembros.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        menuCadastrarCongreg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/registro.png"))); // NOI18N
+        menuCadastrarCongreg.setText("Cadastrar");
+        menuCadastrarCongreg.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
 
         menuCadastrarMembro.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
         menuCadastrarMembro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/grupo-de-usuarios.png"))); // NOI18N
@@ -160,14 +160,19 @@ public class GUIHomeSecretaria extends javax.swing.JFrame {
                 menuCadastrarMembroActionPerformed(evt);
             }
         });
-        menuCadastrarMembros.add(menuCadastrarMembro);
-        menuCadastrarMembros.add(jSeparator1);
+        menuCadastrarCongreg.add(menuCadastrarMembro);
+        menuCadastrarCongreg.add(jSeparator1);
 
-        jMenuItem8.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
-        jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/catedral-de-trujillo.png"))); // NOI18N
-        jMenuItem8.setText("Congregação");
-        menuCadastrarMembros.add(jMenuItem8);
-        menuCadastrarMembros.add(jSeparator5);
+        cadastrarCong.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        cadastrarCong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/catedral-de-trujillo.png"))); // NOI18N
+        cadastrarCong.setText("Congregação");
+        cadastrarCong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cadastrarCongActionPerformed(evt);
+            }
+        });
+        menuCadastrarCongreg.add(cadastrarCong);
+        menuCadastrarCongreg.add(jSeparator5);
 
         menuCarta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cartas (1).png"))); // NOI18N
         menuCarta.setText("Carta");
@@ -188,8 +193,8 @@ public class GUIHomeSecretaria extends javax.swing.JFrame {
         });
         menuCarta.add(jMenuItem2);
 
-        menuCadastrarMembros.add(menuCarta);
-        menuCadastrarMembros.add(jSeparator10);
+        menuCadastrarCongreg.add(menuCarta);
+        menuCadastrarCongreg.add(jSeparator10);
 
         menuCarta1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/conferencia.png"))); // NOI18N
         menuCarta1.setText("Evento");
@@ -227,9 +232,9 @@ public class GUIHomeSecretaria extends javax.swing.JFrame {
         });
         menuCarta1.add(jMenuItem13);
 
-        menuCadastrarMembros.add(menuCarta1);
+        menuCadastrarCongreg.add(menuCarta1);
 
-        jMenuBar1.add(menuCadastrarMembros);
+        jMenuBar1.add(menuCadastrarCongreg);
 
         menuEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cadastro.png"))); // NOI18N
         menuEditar.setText("Editar");
@@ -409,9 +414,9 @@ public class GUIHomeSecretaria extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(0, 0, 0)
                 .addComponent(painelPrinciapal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(0, 0, 0))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -419,7 +424,7 @@ public class GUIHomeSecretaria extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(painelPrinciapal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(0, 0, 0))
         );
 
         pack();
@@ -443,9 +448,10 @@ public class GUIHomeSecretaria extends javax.swing.JFrame {
 
     private void menuCadastrarMembroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCadastrarMembroActionPerformed
        
-        GUICadastrar membro = new GUICadastrar();
-        painelPrinciapal.add (membro);
+        GUICadastrarMembro membro = new GUICadastrarMembro();
+        painelPrinciapal.add(membro);
         membro.show();
+                
                 
     }//GEN-LAST:event_menuCadastrarMembroActionPerformed
 
@@ -485,6 +491,12 @@ public class GUIHomeSecretaria extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem19ActionPerformed
 
+    private void cadastrarCongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarCongActionPerformed
+        GUICadastrarCongre congre = new GUICadastrarCongre();
+        painelPrinciapal.add(congre);
+        congre.show();
+    }//GEN-LAST:event_cadastrarCongActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -522,6 +534,7 @@ public class GUIHomeSecretaria extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem cadastrarCong;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -546,7 +559,6 @@ public class GUIHomeSecretaria extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
@@ -565,8 +577,8 @@ public class GUIHomeSecretaria extends javax.swing.JFrame {
     private javax.swing.JPopupMenu.Separator jSeparator7;
     private javax.swing.JPopupMenu.Separator jSeparator8;
     private javax.swing.JPopupMenu.Separator jSeparator9;
+    private javax.swing.JMenu menuCadastrarCongreg;
     private javax.swing.JMenuItem menuCadastrarMembro;
-    private javax.swing.JMenu menuCadastrarMembros;
     private javax.swing.JMenu menuCarta;
     private javax.swing.JMenu menuCarta1;
     private javax.swing.JMenu menuCarta2;
