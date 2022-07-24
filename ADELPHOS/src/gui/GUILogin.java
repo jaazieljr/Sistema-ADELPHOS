@@ -26,6 +26,7 @@ public class GUILogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDesktopPane1 = new javax.swing.JDesktopPane();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -39,6 +40,17 @@ public class GUILogin extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(70, 130, 180));
@@ -125,19 +137,19 @@ public class GUILogin extends javax.swing.JFrame {
                 .addContainerGap(34, Short.MAX_VALUE))
         );
 
-        jLabel6.setBackground(new java.awt.Color(128, 128, 128));
+        jLabel6.setBackground(new java.awt.Color(240, 248, 255));
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(128, 128, 128));
+        jLabel6.setForeground(new java.awt.Color(240, 248, 255));
         jLabel6.setText("jaaziel.de@gmail.com");
 
         jLabel5.setBackground(new java.awt.Color(105, 105, 105));
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(105, 105, 105));
+        jLabel5.setForeground(new java.awt.Color(245, 245, 245));
         jLabel5.setText("Desenvolvido por:");
 
         jLabel7.setBackground(new java.awt.Color(128, 128, 128));
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(128, 128, 128));
+        jLabel7.setForeground(new java.awt.Color(245, 245, 245));
         jLabel7.setText("@JaZa");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -250,6 +262,7 @@ public class GUILogin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bCancelar;
     private javax.swing.JButton btLogin;
+    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
