@@ -218,7 +218,7 @@ public class GUILogin extends javax.swing.JFrame {
     }//GEN-LAST:event_btLoginActionPerformed
 
     private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
-        // TODO add your handling code here:
+       dispose();
     }//GEN-LAST:event_bCancelarActionPerformed
 
     /**
