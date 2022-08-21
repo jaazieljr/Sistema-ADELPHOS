@@ -1,5 +1,6 @@
 package console;
 
+import gui.GUILogin;
 import java.sql.*;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -7,7 +8,7 @@ import java.sql.SQLException;
 public class JdbcConection {
 
     private static final String SERVER_NAME = "localhost";
-    private static final String MY_DATABASE = "crud";
+    private static final String MY_DATABASE = "adelphos";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "9178J.jr";
     private static final String URL = "jdbc:mysql://" + SERVER_NAME + "/" + MY_DATABASE;
@@ -21,5 +22,8 @@ public class JdbcConection {
 
         }
     }
-
+  public static void main(String[] args) {
+        
+        JdbcConection.getConexao();
+  }
 }
