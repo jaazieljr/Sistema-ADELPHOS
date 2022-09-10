@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package gui;
 
 import entities.Usuario;
@@ -66,15 +63,15 @@ public class GUILogin extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(240, 248, 255));
         jPanel2.setForeground(new java.awt.Color(255, 255, 240));
 
-        jPanel1.setBackground(new java.awt.Color(70, 130, 180));
-        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel1.setBackground(new java.awt.Color(240, 248, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(70, 130, 180)));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(240, 248, 255));
+        jLabel3.setForeground(new java.awt.Color(70, 130, 180));
         jLabel3.setText("Senha");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(240, 248, 255));
+        jLabel4.setForeground(new java.awt.Color(70, 130, 180));
         jLabel4.setText("Login");
 
         txtSenha.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -105,24 +102,22 @@ public class GUILogin extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addGap(29, 29, 29)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(bCancelar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btLogin))
                     .addComponent(txtUsuario)
                     .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(39, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bCancelar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btLogin)
-                .addGap(15, 15, 15))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addGap(23, 23, 23)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -134,7 +129,7 @@ public class GUILogin extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bCancelar)
                     .addComponent(btLogin))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         jLabel6.setBackground(new java.awt.Color(240, 248, 255));
@@ -229,27 +224,26 @@ public class GUILogin extends javax.swing.JFrame {
     }//GEN-LAST:event_txtUsuarioActionPerformed
 
     private void btLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLoginActionPerformed
-        
+
         Usuario usuario = new Usuario();
-        
-        if (!usuario.validarUsuarios(txtUsuario.getText(),new String(txtSenha.getPassword()))){
+
+        if (!usuario.validarUsuarios(txtUsuario.getText(), new String(txtSenha.getPassword()))) {
             JOptionPane.showMessageDialog(rootPane, "USUÁRIO OU SENHA INCORRETA!");
-           txtUsuario.setText("");
-           txtSenha.setText("");
-           txtUsuario.requestFocusInWindow();
-           return;
-        }
-        else{
-        GUIHomeSecretaria home = new GUIHomeSecretaria();
-        home.setLocationRelativeTo(null);
-        home.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        home.setVisible(true);
-        this.dispose();
+            txtUsuario.setText("");
+            txtSenha.setText("");
+            txtUsuario.requestFocusInWindow();
+            return;
+        } else {
+            GUIHomeSecretaria home = new GUIHomeSecretaria();
+            home.setLocationRelativeTo(null);
+            home.setExtendedState(JFrame.MAXIMIZED_BOTH);
+            home.setVisible(true);
+            this.dispose();
         }
     }//GEN-LAST:event_btLoginActionPerformed
 
     private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
-       this.dispose();
+        this.dispose();
     }//GEN-LAST:event_bCancelarActionPerformed
 
     /**
