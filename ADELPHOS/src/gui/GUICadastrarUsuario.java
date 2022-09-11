@@ -63,6 +63,10 @@ public class GUICadastrarUsuario extends javax.swing.JInternalFrame {
         setResizable(true);
         setTitle("Cadastrar Congregação");
 
+        jPanel6.setBackground(new java.awt.Color(240, 248, 255));
+        jPanel6.setForeground(new java.awt.Color(240, 248, 255));
+
+        jPanel7.setBackground(new java.awt.Color(0, 56, 100));
         jPanel7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel7.setFont(new java.awt.Font("Arial Unicode MS", 0, 10)); // NOI18N
 
@@ -75,11 +79,11 @@ public class GUICadastrarUsuario extends javax.swing.JInternalFrame {
         });
 
         jLabel18.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(70, 130, 180));
+        jLabel18.setForeground(new java.awt.Color(240, 248, 255));
         jLabel18.setText("Nº");
 
         jLabel5.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(70, 130, 180));
+        jLabel5.setForeground(new java.awt.Color(240, 248, 255));
         jLabel5.setText("Nome");
 
         jTextField6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -91,7 +95,7 @@ public class GUICadastrarUsuario extends javax.swing.JInternalFrame {
         });
 
         jLabel11.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(70, 130, 180));
+        jLabel11.setForeground(new java.awt.Color(240, 248, 255));
         jLabel11.setText("Email");
 
         jTextField14.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -117,13 +121,14 @@ public class GUICadastrarUsuario extends javax.swing.JInternalFrame {
         });
 
         jLabel25.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
-        jLabel25.setForeground(new java.awt.Color(70, 130, 180));
+        jLabel25.setForeground(new java.awt.Color(240, 248, 255));
         jLabel25.setText("Fone");
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        jLabel15.setBackground(new java.awt.Color(0, 56, 100));
         jLabel15.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(70, 130, 180));
+        jLabel15.setForeground(new java.awt.Color(0, 56, 100));
         jLabel15.setText("Sexo");
 
         jRadioButton1.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
@@ -146,7 +151,7 @@ public class GUICadastrarUsuario extends javax.swing.JInternalFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -175,13 +180,14 @@ public class GUICadastrarUsuario extends javax.swing.JInternalFrame {
         });
 
         jLabel6.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(70, 130, 180));
+        jLabel6.setForeground(new java.awt.Color(240, 248, 255));
         jLabel6.setText("CPF");
 
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        jLabel16.setBackground(new java.awt.Color(0, 56, 100));
         jLabel16.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(70, 130, 180));
+        jLabel16.setForeground(new java.awt.Color(0, 56, 100));
         jLabel16.setText("Cargo ");
 
         jComboBox1.setFont(new java.awt.Font("Arial Unicode MS", 0, 18)); // NOI18N
@@ -272,19 +278,24 @@ public class GUICadastrarUsuario extends javax.swing.JInternalFrame {
                 .addGap(20, 20, 20))
         );
 
+        jPanel13.setBackground(new java.awt.Color(0, 56, 100));
         jPanel13.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel13.setFont(new java.awt.Font("Arial Unicode MS", 0, 10)); // NOI18N
 
-        buttonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-apagar-para-sempre-24.png"))); // NOI18N
+        buttonCancelar.setBackground(new java.awt.Color(0, 56, 100));
+        buttonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Botoes/excluir.png"))); // NOI18N
         buttonCancelar.setToolTipText("Cancelar");
+        buttonCancelar.setBorder(null);
         buttonCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonCancelarActionPerformed(evt);
             }
         });
 
-        buttonSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/salve-.png"))); // NOI18N
+        buttonSalvar.setBackground(new java.awt.Color(0, 56, 100));
+        buttonSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Botoes/salvar.png"))); // NOI18N
         buttonSalvar.setToolTipText("Salvar");
+        buttonSalvar.setBorder(null);
 
         jTextField15.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jTextField15.setToolTipText("Logradouro");
@@ -294,24 +305,30 @@ public class GUICadastrarUsuario extends javax.swing.JInternalFrame {
             }
         });
 
-        buttonCancelar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/lupa.png"))); // NOI18N
+        buttonCancelar1.setBackground(new java.awt.Color(0, 56, 100));
+        buttonCancelar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Botoes/pesquisar.png"))); // NOI18N
         buttonCancelar1.setToolTipText("Cancelar");
+        buttonCancelar1.setBorder(null);
         buttonCancelar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonCancelar1ActionPerformed(evt);
             }
         });
 
-        buttonCancelar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/proibido.png"))); // NOI18N
+        buttonCancelar2.setBackground(new java.awt.Color(0, 56, 100));
+        buttonCancelar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Botoes/cancelar.png"))); // NOI18N
         buttonCancelar2.setToolTipText("Cancelar");
+        buttonCancelar2.setBorder(null);
         buttonCancelar2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonCancelar2ActionPerformed(evt);
             }
         });
 
-        buttonCancelar3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-lápis-24.png"))); // NOI18N
+        buttonCancelar3.setBackground(new java.awt.Color(0, 56, 100));
+        buttonCancelar3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Botoes/editar.png"))); // NOI18N
         buttonCancelar3.setToolTipText("Cancelar");
+        buttonCancelar3.setBorder(null);
         buttonCancelar3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonCancelar3ActionPerformed(evt);
@@ -326,16 +343,16 @@ public class GUICadastrarUsuario extends javax.swing.JInternalFrame {
                 .addGap(28, 28, 28)
                 .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(buttonCancelar1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 251, Short.MAX_VALUE)
-                .addComponent(buttonCancelar3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(buttonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(buttonCancelar2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(buttonSalvar)
-                .addGap(53, 53, 53))
+                .addComponent(buttonCancelar1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(buttonCancelar3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(buttonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(buttonCancelar2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(buttonSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -351,11 +368,12 @@ public class GUICadastrarUsuario extends javax.swing.JInternalFrame {
                 .addGap(16, 16, 16))
         );
 
+        jPanel14.setBackground(new java.awt.Color(0, 56, 100));
         jPanel14.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel14.setFont(new java.awt.Font("Arial Unicode MS", 0, 10)); // NOI18N
 
         jLabel19.setFont(new java.awt.Font("Arial Unicode MS", 1, 24)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(70, 130, 180));
+        jLabel19.setForeground(new java.awt.Color(240, 248, 255));
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setText("Cadastrar Usuário");
 
@@ -364,9 +382,9 @@ public class GUICadastrarUsuario extends javax.swing.JInternalFrame {
         jPanel14Layout.setHorizontalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel14Layout.createSequentialGroup()
-                .addGap(249, 249, 249)
-                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -375,6 +393,9 @@ public class GUICadastrarUsuario extends javax.swing.JInternalFrame {
                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jScrollPane2.setBackground(new java.awt.Color(0, 56, 100));
+        jScrollPane2.setForeground(new java.awt.Color(240, 248, 255));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -394,14 +415,13 @@ public class GUICadastrarUsuario extends javax.swing.JInternalFrame {
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap(115, Short.MAX_VALUE)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 723, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(122, Short.MAX_VALUE)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2))
+                .addContainerGap(90, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -424,16 +444,16 @@ public class GUICadastrarUsuario extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(3, 3, 3)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 944, Short.MAX_VALUE)
-                .addGap(3, 3, 3))
+                .addGap(0, 0, 0)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 964, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 584, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 548, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();

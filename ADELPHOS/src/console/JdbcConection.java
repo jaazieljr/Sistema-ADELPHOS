@@ -24,6 +24,6 @@ public class JdbcConection {
     }
   public static void main(String[] args) {
         
-        JdbcConection.getConexao();
+      //  JdbcConection.getConexao();
   }
 }

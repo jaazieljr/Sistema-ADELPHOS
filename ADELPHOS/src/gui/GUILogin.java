@@ -38,7 +38,6 @@ public class GUILogin extends javax.swing.JFrame {
         btLogin = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -63,15 +62,15 @@ public class GUILogin extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(240, 248, 255));
         jPanel2.setForeground(new java.awt.Color(255, 255, 240));
 
-        jPanel1.setBackground(new java.awt.Color(240, 248, 255));
+        jPanel1.setBackground(new java.awt.Color(0, 56, 100));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(70, 130, 180)));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(70, 130, 180));
+        jLabel3.setForeground(new java.awt.Color(240, 248, 255));
         jLabel3.setText("Senha");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(70, 130, 180));
+        jLabel4.setForeground(new java.awt.Color(240, 248, 255));
         jLabel4.setText("Login");
 
         txtSenha.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -134,23 +133,18 @@ public class GUILogin extends javax.swing.JFrame {
 
         jLabel6.setBackground(new java.awt.Color(240, 248, 255));
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(70, 130, 180));
+        jLabel6.setForeground(new java.awt.Color(0, 56, 100));
         jLabel6.setText("jaaziel.dev@gmail.com");
 
         jLabel5.setBackground(new java.awt.Color(105, 105, 105));
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(70, 130, 180));
+        jLabel5.setForeground(new java.awt.Color(0, 56, 100));
         jLabel5.setText("Desenvolvido por:");
 
-        jLabel7.setBackground(new java.awt.Color(128, 128, 128));
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(70, 130, 180));
-        jLabel7.setText("@JaZa");
-
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/logo igreja c nome.png"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/logo/logoIgreja200x200.png"))); // NOI18N
         jLabel10.setText("minhas");
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/logo jaza.png"))); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/logo/logoJaza50x50.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -167,13 +161,11 @@ public class GUILogin extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel7)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel5)))
-                        .addGap(18, 18, 18)
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel13)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -192,12 +184,9 @@ public class GUILogin extends javax.swing.JFrame {
                         .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel7))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel5)
+                        .addComponent(jLabel6))
                     .addComponent(jLabel13))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -234,7 +223,7 @@ public class GUILogin extends javax.swing.JFrame {
             txtUsuario.requestFocusInWindow();
             return;
         } else {
-            GUIHomeSecretaria home = new GUIHomeSecretaria();
+            GUIHome home = new GUIHome();
             home.setLocationRelativeTo(null);
             home.setExtendedState(JFrame.MAXIMIZED_BOTH);
             home.setVisible(true);
@@ -294,7 +283,6 @@ public class GUILogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
