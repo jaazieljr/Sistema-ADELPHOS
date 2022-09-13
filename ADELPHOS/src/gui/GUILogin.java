@@ -2,6 +2,8 @@
 package gui;
 
 import entities.Usuario;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -11,11 +13,14 @@ import javax.swing.JOptionPane;
  */
 public class GUILogin extends javax.swing.JFrame {
 
-    /**
-     * Creates new form GUILogin
-     */
+    
     public GUILogin() {
         initComponents();
+        
+      
+              Image icon = new ImageIcon(getClass().getResource("/icons/Logo/logoAdelphos.png")).getImage();
+              this.setIconImage(icon);
+        
     }
 
     /**
@@ -271,6 +276,8 @@ public class GUILogin extends javax.swing.JFrame {
                 new GUILogin().setVisible(true);
             }
         });
+        
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
