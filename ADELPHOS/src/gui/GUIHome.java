@@ -7,7 +7,6 @@ package gui;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 
-
 public class GUIHome extends javax.swing.JFrame {
 
     /**
@@ -15,8 +14,8 @@ public class GUIHome extends javax.swing.JFrame {
      */
     public GUIHome() {
         initComponents();
-         Image icon = new ImageIcon(getClass().getResource("/icons/Logo/logoAdelphos.png")).getImage();
-         this.setIconImage(icon);
+        Image icon = new ImageIcon(getClass().getResource("/icons/Logo/logoAdelphos.png")).getImage();
+        this.setIconImage(icon);
     }
 
     /**
@@ -32,7 +31,7 @@ public class GUIHome extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         painelPrinciapal = new javax.swing.JPanel();
-        jMenuBar1 = new javax.swing.JMenuBar();
+        BarraDeNavegacao = new javax.swing.JMenuBar();
         menuCadastrarCongreg = new javax.swing.JMenu();
         menuCadastrarMembro1 = new javax.swing.JMenuItem();
         cadastrarCong = new javax.swing.JMenuItem();
@@ -49,11 +48,10 @@ public class GUIHome extends javax.swing.JFrame {
         jMenuItem13 = new javax.swing.JMenuItem();
         jSeparator18 = new javax.swing.JPopupMenu.Separator();
         menuCadastrarMembro2 = new javax.swing.JMenuItem();
-        menuMembros2 = new javax.swing.JMenu();
+        menuVizualizar = new javax.swing.JMenu();
         jMenuItem7 = new javax.swing.JMenuItem();
         jSeparator7 = new javax.swing.JPopupMenu.Separator();
         menuItemMembro2 = new javax.swing.JMenuItem();
-        jMenuItem10 = new javax.swing.JMenuItem();
         jSeparator4 = new javax.swing.JPopupMenu.Separator();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem5 = new javax.swing.JMenuItem();
@@ -83,7 +81,7 @@ public class GUIHome extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 518, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(45, 45, 45))
         );
@@ -101,6 +99,11 @@ public class GUIHome extends javax.swing.JFrame {
         );
 
         painelPrinciapal.setBackground(new java.awt.Color(240, 248, 255));
+        painelPrinciapal.addContainerListener(new java.awt.event.ContainerAdapter() {
+            public void componentAdded(java.awt.event.ContainerEvent evt) {
+                painelPrinciapalComponentAdded(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelPrinciapalLayout = new javax.swing.GroupLayout(painelPrinciapal);
         painelPrinciapal.setLayout(painelPrinciapalLayout);
@@ -220,17 +223,17 @@ public class GUIHome extends javax.swing.JFrame {
         });
         menuCadastrarCongreg.add(menuCadastrarMembro2);
 
-        jMenuBar1.add(menuCadastrarCongreg);
+        BarraDeNavegacao.add(menuCadastrarCongreg);
 
-        menuMembros2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Componentes/visualizar.png"))); // NOI18N
-        menuMembros2.setText("Vizualizar");
-        menuMembros2.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        menuVizualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Componentes/visualizar.png"))); // NOI18N
+        menuVizualizar.setText("Vizualizar");
+        menuVizualizar.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
 
         jMenuItem7.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
         jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Componentes/cartao.png"))); // NOI18N
         jMenuItem7.setText("Cartão de Membro");
-        menuMembros2.add(jMenuItem7);
-        menuMembros2.add(jSeparator7);
+        menuVizualizar.add(jMenuItem7);
+        menuVizualizar.add(jSeparator7);
 
         menuItemMembro2.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
         menuItemMembro2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Componentes/membros.png"))); // NOI18N
@@ -241,13 +244,8 @@ public class GUIHome extends javax.swing.JFrame {
                 menuItemMembro2ActionPerformed(evt);
             }
         });
-        menuMembros2.add(menuItemMembro2);
-
-        jMenuItem10.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
-        jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Componentes/congregacao.png"))); // NOI18N
-        jMenuItem10.setText("Congregação");
-        menuMembros2.add(jMenuItem10);
-        menuMembros2.add(jSeparator4);
+        menuVizualizar.add(menuItemMembro2);
+        menuVizualizar.add(jSeparator4);
 
         jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Componentes/cartas.png"))); // NOI18N
         jMenu3.setText("Carta");
@@ -268,7 +266,7 @@ public class GUIHome extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem6);
 
-        menuMembros2.add(jMenu3);
+        menuVizualizar.add(jMenu3);
 
         menuCarta3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Componentes/evento.png"))); // NOI18N
         menuCarta3.setText("Evento");
@@ -306,16 +304,16 @@ public class GUIHome extends javax.swing.JFrame {
         });
         menuCarta3.add(jMenuItem19);
 
-        menuMembros2.add(menuCarta3);
+        menuVizualizar.add(menuCarta3);
 
-        jMenuBar1.add(menuMembros2);
+        BarraDeNavegacao.add(menuVizualizar);
 
         menuSobre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Componentes/sobre.png"))); // NOI18N
         menuSobre.setText("Sobre");
         menuSobre.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
-        jMenuBar1.add(menuSobre);
+        BarraDeNavegacao.add(menuSobre);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(BarraDeNavegacao);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -345,12 +343,12 @@ public class GUIHome extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void menuCadastrarMembroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCadastrarMembroActionPerformed
-       
+
         GUICadastrarMembro membro = new GUICadastrarMembro();
         painelPrinciapal.add(membro);
-        membro.show();
-                
-                
+        membro.setVisible(true);
+
+
     }//GEN-LAST:event_menuCadastrarMembroActionPerformed
 
     private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
@@ -380,13 +378,15 @@ public class GUIHome extends javax.swing.JFrame {
     private void cadastrarCongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarCongActionPerformed
         GUICadastrarCongre congre = new GUICadastrarCongre();
         painelPrinciapal.add(congre);
-        congre.show();
+        congre.setVisible(true);
     }//GEN-LAST:event_cadastrarCongActionPerformed
 
     private void menuCadastrarMembro1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCadastrarMembro1ActionPerformed
-GUICadastrarUsuario user = new GUICadastrarUsuario();
+        GUICadastrarUsuario user = new GUICadastrarUsuario();
         painelPrinciapal.add(user);
-        user.show();        // TODO add your handling code here:
+        user.setVisible(true);
+
+
     }//GEN-LAST:event_menuCadastrarMembro1ActionPerformed
 
     private void menuCadastrarMembro2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCadastrarMembro2ActionPerformed
@@ -396,6 +396,10 @@ GUICadastrarUsuario user = new GUICadastrarUsuario();
     private void menuItemMembro2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemMembro2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_menuItemMembro2ActionPerformed
+
+    private void painelPrinciapalComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_painelPrinciapalComponentAdded
+
+    }//GEN-LAST:event_painelPrinciapalComponentAdded
 
     /**
      * @param args the command line arguments
@@ -436,13 +440,12 @@ GUICadastrarUsuario user = new GUICadastrarUsuario();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuBar BarraDeNavegacao;
     private javax.swing.JMenuItem cadastrarCong;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
@@ -470,8 +473,8 @@ GUICadastrarUsuario user = new GUICadastrarUsuario();
     private javax.swing.JMenu menuCarta1;
     private javax.swing.JMenu menuCarta3;
     private javax.swing.JMenuItem menuItemMembro2;
-    private javax.swing.JMenu menuMembros2;
     private javax.swing.JMenu menuSobre;
+    private javax.swing.JMenu menuVizualizar;
     private javax.swing.JPanel painelPrinciapal;
     // End of variables declaration//GEN-END:variables
 }
